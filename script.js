@@ -61,7 +61,7 @@ function goStore() {
 }
 
 function goCave() {
-  update(locations[2])
+  update(locations[2]);
 }
 
 function fightDragon() {
@@ -69,7 +69,14 @@ function fightDragon() {
 }
 
 function buyHealth() {
-
+  if (gold >= 10) {
+    gold -= 10;
+    health += 10;
+    goldText.innerText = gold;
+    healthText.innerText = health;
+  }else{
+    alert("Your gold stock is empty sir")
+  }
 }
 
 function buyWeapon() {
